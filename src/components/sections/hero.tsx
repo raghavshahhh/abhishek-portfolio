@@ -2,56 +2,6 @@
 
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import { TorusKnot, Sphere, Float, MeshDistortMaterial } from '@react-three/drei';
-
-function FloatingShape({ position, children }: { position: [number, number, number]; children: React.ReactNode }) {
-  return (
-    <Float speed={2} rotationIntensity={2} floatIntensity={2}>
-      <group position={position}>{children}</group>
-    </Float>
-  );
-}
-
-function Hero3D() {
-  return (
-    <group>
-      <FloatingShape position={[3, 1, -2]}>
-        <TorusKnot args={[0.8, 0.3, 128, 16]}>
-          <meshPhysicalMaterial
-            color="#000000"
-            metalness={0.9}
-            roughness={0.1}
-            clearcoat={1}
-            clearcoatRoughness={0.1}
-          />
-        </TorusKnot>
-      </FloatingShape>
-      <FloatingShape position={[-3, -1, 0]}>
-        <Sphere args={[0.6, 32, 32]}>
-          <MeshDistortMaterial
-            color="#333333"
-            attach="material"
-            distort={0.5}
-            speed={2}
-            roughness={0.2}
-          />
-        </Sphere>
-      </FloatingShape>
-      <FloatingShape position={[0, 3, -3]}>
-        <TorusKnot args={[0.5, 0.15, 64, 8]}>
-          <meshPhysicalMaterial
-            color="#111111"
-            metalness={0.9}
-            roughness={0.1}
-            transmission={0.2}
-            transparent
-          />
-        </TorusKnot>
-      </FloatingShape>
-    </group>
-  );
-}
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -63,22 +13,15 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
       id="home"
     >
-      <div className="absolute inset-0 -z-10">
-        <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
-          <ambientLight intensity={0.7} />
-          <pointLight position={[10, 10, 10]} intensity={1} />
-          <pointLight position={[-10, -10, -5]} intensity={0.3} color="#000000" />
-          <Hero3D />
-        </Canvas>
-      </div>
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,_#f3f4f6_0%,_transparent_50%)] opacity-70" />
 
-      <div className="relative z-10 w-full text-center max-w-5xl mx-auto px-6 flex flex-col items-center justify-center -mt-20 md:-mt-24">
+      <div className="relative z-10 w-full text-center max-w-5xl mx-auto px-6 flex flex-col items-center justify-center -mt-32 md:-mt-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black">
             Abhishek Gupta
           </h1>
         </motion.div>

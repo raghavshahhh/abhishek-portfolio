@@ -62,14 +62,16 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative h-80 bg-gray-100 border border-black/10 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                  className="w-40 h-40 border border-black/10"
-                />
-              </div>
+            <div className="relative aspect-square md:aspect-[4/5] bg-gray-100 rounded-3xl overflow-hidden border border-black/10 group shadow-sm">
+              <img
+                src="/profile.jpg"
+                alt="Abhishek Gupta"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onError={(e) => {
+                  // Fallback if image not found
+                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=Abhishek+Gupta&size=800&background=f3f4f6&color=000000`;
+                }}
+              />
             </div>
           </motion.div>
         </div>

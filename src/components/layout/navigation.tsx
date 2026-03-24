@@ -46,8 +46,8 @@ export default function Navigation() {
             : 'bg-white/40 backdrop-blur-md border border-black/5 hover:bg-white/60'
         }`}
       >
-        <div className="flex items-center justify-between gap-12 w-full">
-            <a href="#home" className="text-xl font-bold tracking-tight">
+        <div className="flex items-center justify-between gap-6 md:gap-12 w-full">
+            <a href="#home" className="text-lg md:text-xl font-bold tracking-tight whitespace-nowrap">
               Abhishek Gupta
             </a>
 

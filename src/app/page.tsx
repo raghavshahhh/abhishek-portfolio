@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect } from 'react';
+import { useEffect } from 'react';
 import Hero from '@/components/sections/hero';
 import About from '@/components/sections/about';
 import Stats from '@/components/sections/stats';
@@ -11,7 +11,6 @@ import Skills from '@/components/sections/skills';
 import Contact from '@/components/sections/contact';
 import Navigation from '@/components/layout/navigation';
 import Footer from '@/components/layout/footer';
-import ParticleCanvas from '@/components/3d/particle-canvas';
 
 export default function Home() {
   useEffect(() => {
@@ -43,10 +42,6 @@ export default function Home() {
 
   return (
     <div className="min-h-[100dvh] bg-white text-black overflow-x-hidden">
-      <Suspense fallback={<div className="fixed inset-0 bg-white" />}>
-        <ParticleCanvas />
-      </Suspense>
-
       <Navigation />
 
       <main>
