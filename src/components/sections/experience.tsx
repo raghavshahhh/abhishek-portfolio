@@ -65,8 +65,6 @@ export default function Experience() {
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -90,8 +88,6 @@ export default function Experience() {
               <motion.div
                 key={entry.company}
                 className="relative pl-8 md:pl-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
               >

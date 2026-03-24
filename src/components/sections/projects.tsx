@@ -84,8 +84,6 @@ export default function Projects() {
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -103,8 +101,6 @@ export default function Projects() {
             <motion.div
               key={project.id}
               className="group bg-white border border-black/10 overflow-hidden hover:border-black/30 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >

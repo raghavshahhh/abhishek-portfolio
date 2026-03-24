@@ -65,8 +65,6 @@ export default function Stats() {
             <motion.div
               key={stat.label}
               className="flex flex-col items-center justify-center p-6 border border-black/5 bg-gray-50/50 hover:bg-white hover:border-black/10 transition-colors"
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >

@@ -17,8 +17,6 @@ export default function Hero() {
 
       <div className="relative z-10 w-full text-center max-w-5xl mx-auto px-6 flex flex-col items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black">
@@ -27,8 +25,6 @@ export default function Hero() {
         </motion.div>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="mt-6 text-lg md:text-xl text-gray-600"
         >
@@ -36,8 +32,6 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7 }}
           className="mt-4 text-sm md:text-base text-gray-500 max-w-xl mx-auto"
         >
@@ -45,8 +39,6 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.85 }}
           className="mt-4"
         >
@@ -57,8 +49,6 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
           className="mt-8 flex gap-4 justify-center"
         >

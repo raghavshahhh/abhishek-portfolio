@@ -8,8 +8,6 @@ export default function Footer() {
   return (
     <motion.footer
       className="relative py-12 bg-black border-t border-zinc-900"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >

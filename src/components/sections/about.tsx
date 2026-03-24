@@ -20,8 +20,6 @@ export default function About() {
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
           <motion.div
             className="about-content space-y-6 w-full md:w-1/2 order-2 md:order-1"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -57,8 +55,6 @@ export default function About() {
 
           <motion.div
             className="w-full md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

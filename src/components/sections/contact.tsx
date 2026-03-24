@@ -27,8 +27,6 @@ export default function Contact() {
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -43,8 +41,6 @@ export default function Contact() {
 
         <motion.div
           className="max-w-2xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
