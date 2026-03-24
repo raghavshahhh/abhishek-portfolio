@@ -2,12 +2,13 @@
 
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Github, Linkedin, MessageCircle, Instagram } from 'lucide-react';
 
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/abhi311098', slug: 'github' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abhishek-gupta-2515ab157', slug: 'linkedin' },
-  { name: 'WhatsApp', url: 'https://wa.me/919958484437', slug: 'whatsapp' },
-  { name: 'Instagram', url: 'https://instagram.com/abhi311098', slug: 'instagram' },
+  { name: 'GitHub', url: 'https://github.com/abhi311098', icon: Github },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abhishek-gupta-2515ab157', icon: Linkedin },
+  { name: 'WhatsApp', url: 'https://wa.me/919958484437', icon: MessageCircle },
+  { name: 'Instagram', url: 'https://instagram.com/abhi311098', icon: Instagram },
 ];
 
 export default function About() {
@@ -36,22 +37,21 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full border border-black/10 hover:border-black/30 hover:bg-black group transition-all shadow-sm"
-                  aria-label={social.name}
-                >
-                  <img
-                    src={`https://cdn.simpleicons.org/${social.slug}/000000`}
-                    alt={social.name}
-                    className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:invert transition-all"
-                  />
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 rounded-full border border-black/10 hover:border-black/30 hover:bg-black hover:text-white text-black group transition-all shadow-sm"
+                    aria-label={social.name}
+                  >
+                    <Icon className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-all" strokeWidth={1.5} />
+                  </a>
+                );
+              })}
             </div>
           </motion.div>
 
