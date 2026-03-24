@@ -2,13 +2,13 @@
 
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, MessageCircle, Instagram } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/abhi311098', icon: Github },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abhishek-gupta-2515ab157', icon: Linkedin },
-  { name: 'WhatsApp', url: 'https://wa.me/919958484437', icon: MessageCircle },
-  { name: 'Instagram', url: 'https://instagram.com/abhi311098', icon: Instagram },
+  { name: 'GitHub', url: 'https://github.com/abhi311098', icon: FaGithub },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abhishek-gupta-2515ab157', icon: FaLinkedin },
+  { name: 'WhatsApp', url: 'https://wa.me/919958484437', icon: FaWhatsapp },
+  { name: 'Instagram', url: 'https://instagram.com/abhi311098', icon: FaInstagram },
 ];
 
 export default function About() {
