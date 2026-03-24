@@ -10,12 +10,12 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
+      className="relative pt-40 pb-20 md:pt-56 md:pb-32 flex items-center justify-center overflow-hidden bg-white"
       id="home"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,_#f3f4f6_0%,_transparent_50%)] opacity-70" />
 
-      <div className="relative z-10 w-full text-center max-w-5xl mx-auto px-6 flex flex-col items-center justify-center -mt-32 md:-mt-24">
+      <div className="relative z-10 w-full text-center max-w-5xl mx-auto px-6 flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

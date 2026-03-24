@@ -17,9 +17,9 @@ export default function About() {
   return (
     <section ref={containerRef} className="relative py-12 md:py-16 bg-white" id="about">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
           <motion.div
-            className="about-content space-y-6"
+            className="about-content space-y-6 w-full md:w-1/2 order-2 md:order-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -56,19 +56,18 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            className="relative"
+            className="w-full md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative aspect-square md:aspect-[4/5] bg-gray-100 rounded-3xl overflow-hidden border border-black/10 group shadow-sm">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gray-100 rounded-full border border-black/10 shadow-md overflow-hidden group">
               <img
                 src="/profile.jpg"
                 alt="Abhishek Gupta"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
-                  // Fallback if image not found
                   (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=Abhishek+Gupta&size=800&background=f3f4f6&color=000000`;
                 }}
               />
